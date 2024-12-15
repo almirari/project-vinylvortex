@@ -3,8 +3,12 @@ import Container from "../Container";
 import { BsFillVinylFill } from "react-icons/bs";
 import CartCount from "./CartCount";
 import UserMenu from "./UserMenu";
+import { getCurrentUser } from "@/app/actions/getCurrentUser";
 
-const NavBar = () => {
+const NavBar = async() => {
+    const currentUser = await getCurrentUser();
+    // console.log("user<<<", currentUser);
+
     return ( <div className="
         bg-white
         sticky
@@ -31,7 +35,7 @@ const NavBar = () => {
                         <div className="hidden md:block">Search</div>
                         <div className="flex items-center gap-8 md:gap-12">
                             <CartCount />
-                            <UserMenu/>
+                            <UserMenu currentUser={currentUser}/>
                         </div>
                     </div>
                 </Container>
