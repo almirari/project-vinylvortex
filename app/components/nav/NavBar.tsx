@@ -2,6 +2,7 @@ import Link from "next/link";
 import Container from "../Container";
 import { BsFillVinylFill } from "react-icons/bs";
 import CartCount from "./CartCount";
+import UserMenu from "./UserMenu";
 
 const NavBar = () => {
     return ( <div className="
@@ -30,7 +31,7 @@ const NavBar = () => {
                         <div className="hidden md:block">Search</div>
                         <div className="flex items-center gap-8 md:gap-12">
                             <CartCount />
-                            <div>UserMenu</div>
+                            <UserMenu/>
                         </div>
                     </div>
                 </Container>

@@ -35,7 +35,8 @@ const RegisterForm = () => {
             }).then((callback) => {
                 if(callback?.ok){
                     router.push('/cart');
-                    router.refresh();toast.success('logged in');
+                    router.refresh();
+                    toast.success('logged in');
                 }
 
                 if(callback?.error){
